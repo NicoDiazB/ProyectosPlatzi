@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Order</title>
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --white: #FFFFFF;
+            --text-input-field: #F7F7F7;
+            --primary: #ACD9B2;
+            --black: #000000;
+            --dark:#232830;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0%;
+        }
+
+        .order-main{
+            display: grid;
+            place-items: center;
+        }
+
+        .order-container h1{
+            font-size: var(--lg);
+            font-weight: bold;
+
+            align-self: baseline;
+
+            margin-bottom: 40px;
+        }
+        .order-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            width: 320px;
+            height: 100vh;
+            
+            margin: 0%;      
+        }
+
+        .order-prices{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            width: 320px;
+            height: 68px;
+
+            background-color: var(--text-input-field);
+            border-radius: 12px;      
+        }
+
+        .order-prices p{
+            margin: 0;
+            align-self: center;
+
+            font-weight: bold;
+
+            padding: 0 12px;
+        }
+
+        .order-prices span{
+            display: flex;
+
+            font-size: var(--md);
+            font-weight: bold;
+
+            margin-bottom: 2px;
+
+        }
+        .order-prices span:nth-child(2){   
+            font-size: var(--sm);
+            font-weight: 300;
+        }
+
+        
+        .order-items{
+
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 12px;
+            align-items: center;
+
+            /* display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; */
+            
+            width: 320px;
+
+            margin: 12px 0px;
+   
+        }
+        
+        .order-items figure{
+            margin: 0%;
+        }
+
+        .order-items img{
+            width: 60px;
+            height: 60px;
+
+            border-radius: 12px;
+
+            /* objer-fit: cover = a hacer que la imagen tenga la el mismo 
+            tamaño en caso de ser una imagen rectangular*/
+        }
+        
+        .order-items p{
+            
+            font-size: var(--sm);
+            font-weight: 300;
+
+        }
+        .order-items p:nth-child(3){
+            
+            font-size: var(--sm);
+            font-weight: bold;
+        }
+
+        @media (max-width: 640px){
+
+            .order-container{
+            justify-content: start;    
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="order-main">
+        <div class="order-container">
+            <h1>My order</h1>
+            <div class="order-prices">
+                <p>
+                    <span>06/06/2022</span>
+                    <span>4 articles</span>
+                </p>
+                <p>total $ 24.000</p>
+            </div>
+            <div class="order-items">
+                <figure>
+                    
+                    <img src="./itasfotos/limon-pimienta.jpeg" alt="">
+                </figure>
+                <p>Habitas Limon-pimienta</p>
+                <p>$ 6.000</p>
+            </div>
+            <div class="order-items">
+                <figure>
+                    
+                    <img src="./itasfotos/garbanzo_chili.jpeg" alt="">
+                </figure>
+                <p>Garbancito Chili-limón</p>
+                <p>$ 6.000</p>
+            </div>
+            <div class="order-items">
+                <figure>
+
+                    <img src="./itasfotos/teriyaki.jpeg" alt="">
+                </figure>
+                <p>Habitas Teriyaki</p>
+                <p>$ 6.000</p>
+            </div>
+            <div class="order-items">
+                <figure>
+                    
+                    <img src="./itasfotos/olvia.jpeg" alt="">
+                </figure>
+                <p>Habitas Oliva y especias</p>
+                <p>$ 6.000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

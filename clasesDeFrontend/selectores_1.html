@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{/* selector universal que pinta todo el DOM */
+            background-color: paleturquoise;
+        }
+        div{/* este es un selector de tipo (lo malo es que cogeria todos los div que tenga en mi html) */
+            background-color: purple;
+            
+        }
+        .title {/* selector por clase se usa un "." es este caso el title es el nombre de la clase */ 
+            color: blue;
+        } 
+        #title2{ /* es un selecto de ID se usa el #*/
+            background-color: black;
+            color: antiquewhite;
+        }
+        a[href="www.google.com"]{/* selector de atributo en este caso es el "href" */
+            color: yellow;
+        }
+       /* Si quiero hacer cambiar de color varias etiquetas se separan con una ","
+       ejemplo:
+       p, h1 ,h2{
+           color: red;
+       }
+       */
+    </style>
+</head>
+<body>
+    <div>Hola gente xD</div>
+    <div class="title">jaja</div>
+    <div id="title2">KEKW</div>
+    <a href="www.google.com">enlace a google</a>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- las Pseudo clases es lo que hace el usuario como click pasar el mouse demas 
+y los pseudo elemetos es para agregar 
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudoClases_pseudoElementos</title>
+    <style>
+        /*hacemos que cambie de color el texto con un selector */
+        p,h1{
+            color: salmon;
+        }
+        /*Hacemos que cuando el mouse pase por encima del texto cambie de color 
+        - si conbino esto con el first latter hace que solo la primera letra cambie de color cuando paso el mouse
+        */
+        p:hover{
+            
+            color: powderblue;
+        }
+        /*con esto puedo especificar cual de las etiquetas quiero que cambie de color cuando pase el mouse por encima  */
+        div p:nth-child(2):hover{
+            color: #ffa500;
+        }
+        /* hacemos que el texto que acompaña el input cambie de color cuando se selecciona*/
+        input:checked + label {
+            color: red;
+        }
+        input:checked::backdrop{
+            background-color: violet;
+        }
+        /*el boton que nos da el navegador no se puede modificas esteticamente toca hace un codigo de CSS 
+        para superponer un boton creado por nosotros
+        esto es un ejemplo de la creacion de un boton con CSS usando el pseudo elemento ::after
+          */
+        input[type='radio']::after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #eefbee;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid rgb(255, 255, 255);
+        }
+
+        input[type='radio']:checked::after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #ffa500;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+        /* con esto hago que la pirmera letra de cada "p" cambie de color o otras cosas */
+        p::first-letter{
+            color: black
+        }
+        p::before{
+            content: "....";
+        }
+        p:hover::before{
+            content: "🤡";
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <input type="radio" name="my-input" id="yes">
+        <label class="yes" for="yes">Yes</label>
+      
+        <input type="radio" name="my-input" id="no">
+        <label class="no" for="no">No</label>
+
+        <input type="radio" name="my-input" id="testing" >
+    </div>
+
+    <p>Hola</p>
+    <div>
+        <h1>Hola</h1>
+        <p>como</p>
+        <p>estas</p>
+    </div>
+</body>
+</html>

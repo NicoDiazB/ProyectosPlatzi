@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada</title>
+    <style>
+        /*toda regla que se escriba en la parte de abajo sobreecribe la parte de arriba */
+        h1 {
+            color: aqua;
+        }
+        h1 {
+            color: red;
+        }
+        /*la especificidad lo que hace es que alguna etiquetas tengan mayor valor que otras. 
+        1. important=10000 (que puede ir despues del atributo como el color de la letra)
+        2. atributo style=1000(tengo que ver como va eso)
+        3. #ID=100
+        4. clases atributos y pseudo clases=10
+        5. elementos y pseudo elementos=1
+        6. selector universal =0 */
+        #hola{
+            color: springgreen;
+        }
+        .h{
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <h1>hola</h1>
+    <div id="hola" class="h">Hola</div>
+</body>
+</html>

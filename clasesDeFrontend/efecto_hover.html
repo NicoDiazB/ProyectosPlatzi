@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background: whitesmoke;
+        }
+        div ul,li{
+            background: rgb(179, 160, 145);
+            height: 200px;
+            width: 200px;
+            display: flex;
+        }
+        li:hover::after{
+            content:url("wasabi.jpeg");
+            display: block;
+            transform: scale(0.1);
+            justify-content: baseline; 
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li class="hover">habas</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: turquoise;
+            justify-content: space-between; /*aliena los elemetos dependiendo del eje
+            que tome(el eje se cambia con "flex-direction:") por defecto viene el eje horizontal */
+            align-items: center;/* alinea los elementos usando el eje opuesto que tenga el justify */
+            /* flex-direction: column;   cambia el eje que usamos en este caso seria un una columna */
+            height: 500px;
+            width: 500px;
+        }
+        .item{
+            width: 30px;
+            height: 30px;
+            background-color: antiquewhite;
+            text-align: center;
+            line-height: 30px;
+        
+
+        }
+        .container .item:nth-child(2n + 1){
+        
+            background-color: yellowgreen;
+            align-self: flex-end;/* con esto puedo mover los item que tenga especificados con los selectores*/
+            
+        }
+        .container2{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(20, 205, 187);
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            width: 500px;
+        }
+        .item2{
+            width: 30px;
+            height: 30px;
+            background-color: rgb(237, 137, 7);
+        }
+        .container2 .item2:nth-child(2n + 1){
+            background-color: rgb(20, 21, 17);
+            color: white;
+        }
+
+        .container2 .item2:nth-child(4){
+            align-self:flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" >1</div>
+        <div class="item" >2</div>
+        <div class="item" >3</div>
+        <div class="item" >4</div>
+        
+    </div>
+    <div class="container2">
+        <div class="item2" >1</div>
+        <div class="item2" >2</div>
+        <div class="item2" >3</div>
+        <div class="item2" >4</div>
+        
+    </div>
+</body>
+</html>

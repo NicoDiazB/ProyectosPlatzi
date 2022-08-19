@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        /*esto quita los margenes que vienen por defecto del body */
+        body{
+            margin: 0%;
+        }
+        div{
+            background-color: aqua;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+        /*los elemtos en linea no tiene valides con la propiedades de width y height*/
+        a{
+            background-color: blueviolet;
+            margin: 20px;  /* el margen solo se se hace visible lateralmente, de arriba y abajo el manrgen no existe */
+        }
+        /*como dice su nombre se le puedde colocar caracteristicas de tipo bloque y tiene su visualizacion como tipo en linea enlinea  */
+        button{
+            background-color: red;
+            color: white;
+            border-color: aqua;
+            width: 200px;
+            height: 200px;
+            border-width: 10px;
+
+        }
+    </style>
+</head>
+    <div>Bloque</div>
+    <a href="/">inline</a> <br>
+    <button>bloque & inline</button>
+</body>
+</html>

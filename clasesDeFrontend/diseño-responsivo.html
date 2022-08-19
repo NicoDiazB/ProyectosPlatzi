@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    div{
+        background: cyan;
+    }
+    /* esto se utiliza cuando usas diferentes dispositivos siempre es mejor hacer desde celular hasta pantallas de computarodes de mesa
+    cuando el minimo de la pantalla sea menor a 500px usara los que esta afuera del @media
+    */
+    @media (min-width: 500px) {
+        div{
+            background: palevioletred;
+        }   
+    }
+    </style>
+</head>
+<body>
+    <div>cambio a color cyan cuando la resolucion de la pantalla baje de 500px</div>
+</body>
+</html>

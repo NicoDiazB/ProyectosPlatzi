@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(233, 167, 25, 0.468);
+            grid-template-columns: 1fr  1fr 1fr 1fr;
+            grid-template-rows: 1fr  1fr 1fr 1fr;
+            
+        }
+        /* con grid cuantas las lineas 1 seria la primera linea del cuadrado de izquierda a derecha
+         si quieres contar de derecha a izquierda se usan numeros negativos */
+        .item{
+            background-color: grey;
+            border: 2px solid black;
+        }
+        .container .item:nth-child(2){
+            grid-column: 2 / 3; /* eje X*/
+            grid-row: 2 / 3; /* eje Y*/
+        }
+        .container .item:nth-child(3){
+            grid-column-start: 3;
+            grid-column-end: span 2;
+            /* esto hace que el grid se expanda */
+        }
+        .container .item:nth-child(4){
+            grid-column: 2 / 5;
+            grid-row: 4 / 5; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

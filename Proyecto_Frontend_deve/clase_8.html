@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./logos/favicon_yard_sale.svg" type="img">
+    <title>Menu con grid</title>
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --primary: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+
+        .mobil-menu{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            height: 100vh;
+
+            padding: 0px 40px 0px 40px;
+        }
+
+        .mobil-menu .email:last-child{
+            grid-row: 4;
+            height: 60px;
+            margin-bottom: 40px;
+
+        }
+        .mobil-menu ul{
+
+            list-style: none;
+
+
+            margin: 28px 0 0 0;
+            padding: 0%;
+
+        }
+
+        .mobil-menu ul:nth-child(2){
+            border-top: 1px solid var(--very-light-pink);
+        }
+        .mobil-menu ul li{
+            font-size: var(--lg);
+            font-weight: bold; 
+
+
+        }
+        .mobil-menu ul li a{
+            display: inline-block;
+            color: var(--black);
+
+            text-decoration: none;
+
+            margin-bottom: 20px ;
+            margin-top: 20px ;
+        }
+
+        
+
+        .mobil-menu .email li:first-child a{
+    
+            font-size: var(--sm);
+            font-weight: 400;
+            
+        }
+        .mobil-menu .email li:last-child a{
+            
+            font-size: var(--md);
+            color: var(--primary);
+            
+        }
+
+        .mobil-menu .email li a{
+    
+            margin:8px 0 0 0 ;
+            
+        }
+
+
+    </style>
+    <body>
+        <div class="mobil-menu">
+            <ul >
+                <li>
+                    <a href="/">CATEGORIES</a>
+                </li>
+                <li>
+                    <a href="/">All</a>
+                </li>
+                <li>
+                    <a href="/">Sabores</a>
+                </li>
+                <li>
+                    <a href="/">Tamaños</a>
+                </li>
+                <li>
+                    <a href="/">Descuento</a>
+                </li>
+                
+            
+            </ul>
+            <ul class="account">
+                <li>
+                    <a href="/">My orders</a>
+                </li>
+                <li>
+                    <a href="/">My account</a>
+                </li>
+            </ul>
+            
+            <ul class="email">
+                <li>
+                    <a href="/">yard@example.com</a>
+                </li>
+                <li>
+                    <a href="/">Sign out</a>
+                </li>
+            </ul>
+            
+        </div>
+    </body>
+</head>
+</html>

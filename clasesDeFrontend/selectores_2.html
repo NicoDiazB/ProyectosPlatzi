@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectores_2</title>
+    <style>
+        /*Ejemplo 1 */
+        div p{/*es un selector combinado que lo que hace es solo seleccionar al hijo en este paso "<p>" del padre en este caso"<div> */
+            color: greenyellow;/* selecciona a cualquiera que cumpla esas caracteristicas que se mencionaron arriba */
+        }
+        /*Ejemplo 2*/
+        div > .rojo{/*este selector solo agarra a los hijos que esten dentro de un "<div>" de forma directa que tengan la clase "rojo" */
+            color: pink;
+        }
+        /*Ejemplo 3 */
+        p + p{/*este selector agarra al selector adyacente(solo selector de abajo) del selector padre  */
+            background-color: rgb(81, 0, 255);
+        }
+        /*Ejemplo 4 */
+        div ~ p {/*selector que agarra a los hermanos del PAPÁ este caso el "div" esto quiere decir a los que esten a la misma altura del "div"  */
+            background-color: rgb(240, 15, 207);
+        }
+    </style>
+</head>
+
+    <div><!-- este es el ejemplo del 1ro  y 3ro-->
+        <p>este si </p>
+        <p>este tambien</p><!--aqui agarra este "p" ya que esta debajo de otro "p" -->
+    </div>
+    <p>este no</p><!--no agarra este ya que esta fuera del div, pero si agarra el selector de hermanos ya que esta a la misma altura del div-->
+
+    <div><!--este es el ejemplo del 2do -->
+        <p class="rojo">este si</p>
+        <section>
+            <p class="rojo" >este no</p><!--Este no lo agarra ya que no esta directamente debajo de un "div" si no que esta dentro de un "section" -->
+        </section>
+        <p class="rojo">este tambien</p>
+    </div>
+
+    <div><!--ejemplo 3ro -->
+        <p>este no</p>
+        <p>este si</p>
+        <p>este si</p>
+    </div>
+    
+    <!--4to ejemplo -->
+    <p class=> hermanos</p><!--cualquier etiqueta "p" que este a la misma altura que un div -->
+    <p class=> hermanos</p>
+    <p class=> hermanos</p>
+
+</body>
+</html>
